@@ -17,10 +17,6 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(icon: Icon(Icons.exit_to_app), onPressed: RepoAuth.logoutUser),
-          IconButton(icon: Icon(Icons.api), onPressed: () async{
-            await RepoHome.userList();
-            print(ViewModelUser.userList.length);
-          })
         ],
       ),
       body: Obx(()=>ListView.builder(
